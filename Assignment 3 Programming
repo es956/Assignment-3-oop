@@ -1,0 +1,114 @@
+PROBLEM 1)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+PROBLEM 2)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int sum = 0;
+        while (n > 0) {
+            sum += n % 10;
+            n /= 10;
+        }
+        System.out.println("Sum of digits = " + sum);
+    }
+}
+
+
+PROBLEM 3)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+PROBLEM 4)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int x = in.nextInt();
+        int max = x, min = x, sum = 0, count = 0;
+        while (x != 0) {
+            if (x > max) max = x;
+            if (x < min) min = x;
+            sum += x;
+            count++;
+            x = in.nextInt();
+        }
+        if (count > 0) {
+            System.out.println("Largest = " + max);
+            System.out.println("Smallest = " + min);
+            System.out.println("Average = " + (double) sum / count);
+        }
+    }
+}
+
+
+PROBLEM 5)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+PROBLEM 6)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int sum = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) sum += i;
+        }
+        if (sum == n)
+            System.out.println(n + " is a perfect number");
+        else
+            System.out.println(n + " is not a perfect number");
+    }
+}
+
+
